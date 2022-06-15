@@ -1,8 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import Logo from '../../../assets/images/logo.svg';
-
+import { ethers } from "ethers";
 const Header = () => {
   const [shrink, setShrink] = useState(false);
+  const [account, setAccount] = useState(null);
+  
+  const web3init = async() =>{
+    console.log("here");
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    await provider.send("eth_requestAccounts", []);
+    const signer = provider.getSigner()
+    const address = await signer.getAddress();
+    setAccount(address);
+    console.log("signers =>", address )
+    console.log("here at end")
+
+  }
+
   let distanceY = 0;
 
   useEffect(() => {
@@ -35,7 +49,7 @@ const Header = () => {
        <li><a href="#gallery">Gallery</a></li>
        <li><a href="#team">Team</a></li>
        <li><a href="#faq">FAQ</a></li>
-       <li><a href="#" className="wallet-connect">Connect</a></li>
+       <li><a  onClick={web3init} className="wallet-connect">Connect</a></li>
       </ul>
      </div>
 
