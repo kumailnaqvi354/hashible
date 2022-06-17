@@ -2,53 +2,53 @@
   font-family: "slick";
   font-weight: normal;
   font-style: normal;
-  src: url("../src/assets/fonts/slick.eot");
-  src: url("../src/assets/fonts/slick.eot?#iefix") format("embedded-opentype"), url("../src/assets/fonts/slick.woff") format("woff"), url("../src/assets/fonts/slick.ttf") format("truetype"), url("../src/assets/fonts/slick.svg#slick") format("svg"); }
+  src: url("../fonts/slick.eot");
+  src: url("../fonts/slick.eot?#iefix") format("embedded-opentype"), url("../fonts/slick.woff") format("woff"), url("../fonts/slick.ttf") format("truetype"), url("../fonts/slick.svg#slick") format("svg"); }
 @font-face {
   font-family: "Champion Gothic Welterweight";
-  src: url("../src/assets/fonts/ChampionGothic-Welterweight.woff2") format("woff2");
+  src: url("../fonts/ChampionGothic-Welterweight.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
 @font-face {
   font-family: "Champion Gothic Lightweight";
-  src: url("../src/assets/fonts/ChampionGothic-Lightweight.woff2") format("woff2");
+  src: url("../fonts/ChampionGothic-Lightweight.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap; }
 @font-face {
   font-family: "Champion Gothic Featherweight";
-  src: url("../src/assets/fonts/ChampionGothic-Featherweight.woff2") format("woff2");
+  src: url("../fonts/ChampionGothic-Featherweight.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap; }
 @font-face {
   font-family: "Champion Gothic Bantamweight";
-  src: url("../src/assets/fonts/ChampionGothic-Bantamweight.woff2") format("woff2");
+  src: url("../fonts/ChampionGothic-Bantamweight.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap; }
 @font-face {
   font-family: "Champion Gothic Middleweight";
-  src: url("../src/assets/fonts/ChampionGothic-Middleweight.woff2") format("woff2");
+  src: url("../fonts/ChampionGothic-Middleweight.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
 @font-face {
   font-family: "Champion Gothic Heavyweight";
-  src: url("../src/assets/fonts/ChampionGothic-Heavyweight.woff2") format("woff2");
+  src: url("../fonts/ChampionGothic-Heavyweight.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap; }
 @font-face {
   font-family: "Century Gothic Bold";
-  src: url("../src/assets/fonts/CenturyGothic-Bold.woff2") format("woff2");
+  src: url("../fonts/CenturyGothic-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap; }
 @font-face {
   font-family: "Century Gothic";
-  src: url("../src/assets/fonts/CenturyGothic.woff2") format("woff2");
+  src: url("../fonts/CenturyGothic.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
@@ -365,7 +365,9 @@ section h2 {
   grid-template-columns: 60% 1fr;
   max-width: 980px;
   grid-gap: 60px;
-  margin: auto; }
+  margin: auto;
+  position: relative;
+  z-index: 2; }
 
 .roadmap-right-line,
 .roadmap-left-line {
@@ -500,22 +502,18 @@ footer {
     left: 0%;
     transform: rotate(0deg); }
   10% {
-    left: 0%;
-    transform: rotate(0deg); }
+    top: 30%; }
   20% {
-    transform: rotate(0deg); }
+    top: 30%;
+    transform: rotate(-40deg); }
   30% {
-    top: 30%;
-    transform: rotate(-40deg); }
+    top: 30%; }
   40% {
-    top: 30%;
-    transform: rotate(-40deg); }
+    top: 30%; }
   50% {
-    top: 30%;
-    transform: rotate(-40deg); }
+    top: 30%; }
   60% {
-    top: 30%;
-    transform: rotate(-40deg); }
+    top: 30%; }
   70% {
     top: 30%; }
   80% {
@@ -532,22 +530,17 @@ footer {
     right: 0%;
     transform: rotate(0deg); }
   10% {
-    right: 0%;
-    transform: rotate(0deg); }
+    top: 30%; }
   20% {
-    transform: rotate(0deg); }
+    transform: rotate(40deg); }
   30% {
-    top: 30%;
-    transform: rotate(40deg); }
+    top: 30%; }
   40% {
-    top: 30%;
-    transform: rotate(40deg); }
+    top: 30%; }
   50% {
-    top: 30%;
-    transform: rotate(40deg); }
+    top: 30%; }
   60% {
-    top: 30%;
-    transform: rotate(40deg); }
+    top: 30%; }
   70% {
     top: 30%; }
   80% {
@@ -566,7 +559,7 @@ footer {
   .roadmap-line::after {
     position: absolute;
     content: "";
-    background: white;
+    background: #ff4a4a;
     display: block;
     width: 100%;
     height: 400px; }
@@ -578,7 +571,8 @@ footer {
   display: block;
   width: 100%;
   height: 400px;
-  animation: roadmap-anim 4s; }
+  animation: roadmap-anim 4s;
+  animation-delay: 0.5s; }
 
 .roadmap-line-opposite {
   position: relative;
@@ -600,7 +594,17 @@ footer {
   display: block;
   width: 100%;
   height: 400px;
-  animation: roadmap-anim-opposite 4s; }
+  animation: roadmap-anim-opposite 4s;
+  animation-delay: 0.5s; }
+
+.roadmap-left-line,
+.roadmap-right-line {
+  opacity: 0;
+  transition-delay: 0.5s; }
+
+.in-viewport.roadmap-left-line,
+.in-viewport.roadmap-right-line {
+  opacity: 1; }
 
 @media only screen and (max-width: 1023px) {
   .hide-on-mobile {
@@ -2164,7 +2168,7 @@ article {
   .accordion-parent h3::after {
     position: absolute;
     content: "";
-    background: url(../src/assets/images/accordion-arrow.svg);
+    background: url(../images/accordion-arrow.svg);
     width: 41px;
     height: 23px;
     display: block;
@@ -2225,3 +2229,5 @@ article {
     transform: rotate(90deg); } }
 path {
   transition: stroke-dashoffset 1000ms ease; }
+
+/*# sourceMappingURL=main.css.map */
