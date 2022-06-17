@@ -2168,7 +2168,7 @@ footer {
    .accordion-parent h3::after {
      position: absolute;
      content: "";
-     background: url(../images/accordion-arrow.svg);
+     background: url(../src/assets/images/accordion-arrow.svg);
      width: 41px;
      height: 23px;
      display: block;
