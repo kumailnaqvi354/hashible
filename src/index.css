@@ -1,57 +1,57 @@
 @font-face {
-  font-family: "slick";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../src/assets/fonts/slick.eot");
-  src: url("../src/assets/fonts/slick.eot?#iefix") format("embedded-opentype"), url("../src/assets/fonts/slick.woff") format("woff"), url("../src/assets/fonts/slick.ttf") format("truetype"), url("../src/assets/fonts/slick.svg#slick") format("svg"); }
+ font-family: "slick";
+ font-weight: normal;
+ font-style: normal;
+ src: url("../src/assets/fonts/slick.eot");
+ src: url("../src/assets/fonts/slick.eot?#iefix") format("embedded-opentype"), url("../src/assets/fonts/slick.woff") format("woff"), url("../src/assets/fonts/slick.ttf") format("truetype"), url("../src/assets/fonts/slick.svg#slick") format("svg"); }
 @font-face {
-  font-family: "Champion Gothic Welterweight";
-  src: url("../src/assets/fonts/ChampionGothic-Welterweight.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; }
+ font-family: "Champion Gothic Welterweight";
+ src: url("../src/assets/fonts/ChampionGothic-Welterweight.woff2") format("woff2");
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap; }
 @font-face {
-  font-family: "Champion Gothic Lightweight";
-  src: url("../src/assets/fonts/ChampionGothic-Lightweight.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap; }
+ font-family: "Champion Gothic Lightweight";
+ src: url("../src/assets/fonts/ChampionGothic-Lightweight.woff2") format("woff2");
+ font-weight: 300;
+ font-style: normal;
+ font-display: swap; }
 @font-face {
-  font-family: "Champion Gothic Featherweight";
-  src: url("../src/assets/fonts/ChampionGothic-Featherweight.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap; }
+ font-family: "Champion Gothic Featherweight";
+ src: url("../src/assets/fonts/ChampionGothic-Featherweight.woff2") format("woff2");
+ font-weight: 300;
+ font-style: normal;
+ font-display: swap; }
 @font-face {
-  font-family: "Champion Gothic Bantamweight";
-  src: url("../src/assets/fonts/ChampionGothic-Bantamweight.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap; }
+ font-family: "Champion Gothic Bantamweight";
+ src: url("../src/assets/fonts/ChampionGothic-Bantamweight.woff2") format("woff2");
+ font-weight: 300;
+ font-style: normal;
+ font-display: swap; }
 @font-face {
-  font-family: "Champion Gothic Middleweight";
-  src: url("../src/assets/fonts/ChampionGothic-Middleweight.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; }
+ font-family: "Champion Gothic Middleweight";
+ src: url("../src/assets/fonts/ChampionGothic-Middleweight.woff2") format("woff2");
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap; }
 @font-face {
-  font-family: "Champion Gothic Heavyweight";
-  src: url("../src/assets/fonts/ChampionGothic-Heavyweight.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap; }
+ font-family: "Champion Gothic Heavyweight";
+ src: url("../src/assets/fonts/ChampionGothic-Heavyweight.woff2") format("woff2");
+ font-weight: bold;
+ font-style: normal;
+ font-display: swap; }
 @font-face {
-  font-family: "Century Gothic Bold";
-  src: url("../src/assets/fonts/CenturyGothic-Bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap; }
+ font-family: "Century Gothic Bold";
+ src: url("../src/assets/fonts/CenturyGothic-Bold.woff2") format("woff2");
+ font-weight: bold;
+ font-style: normal;
+ font-display: swap; }
 @font-face {
-  font-family: "Century Gothic";
-  src: url("../src/assets/fonts/CenturyGothic.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; }
+ font-family: "Century Gothic";
+ src: url("../src/assets/fonts/CenturyGothic.woff2") format("woff2");
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap; }
 html,
 body,
 div,
@@ -133,12 +133,12 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -152,349 +152,349 @@ hgroup,
 menu,
 nav,
 section {
-  display: block; }
+ display: block; }
 
 body {
-  line-height: 1; }
+ line-height: 1; }
 
 ol,
 ul {
-  list-style: none; }
+ list-style: none; }
 
 blockquote,
 q {
-  quotes: none; }
+ quotes: none; }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none; }
+ content: "";
+ content: none; }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
+ border-collapse: collapse;
+ border-spacing: 0; }
+ html {
+  overflow-x: hidden; }
 body {
-  color: #212224;
-  overflow-x: hidden;
-  font-family: "Century Gothic", serif; }
+ color: #212224;
+ overflow-x: hidden;
+ font-family: "Century Gothic", serif; }
 
 #home,
 #about,
 #gallery,
 #team #faq {
-  min-height: 100vh; }
+ min-height: 100vh; }
 
 p {
-  font-size: 20px;
-  line-height: 35px; }
+ font-size: 20px;
+ line-height: 35px; }
 
 .light-bg {
-  background: #fafafa; }
+ background: #fafafa; }
 
 .main-wrapper {
-  max-width: 1500px;
-  margin: 0 auto; }
+ max-width: 1500px;
+ margin: 0 auto; }
 
 .header-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  align-items: center; }
+ display: flex;
+ justify-content: space-between;
+ padding: 20px;
+ align-items: center; }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: white;
-  overflow: hidden;
-  -webkit-transition: height 0.3s;
-  -moz-transition: height 0.3s;
-  transition: height 0.3s;
-  border-bottom: 1px solid white; }
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ z-index: 1000;
+ background: white;
+ overflow: hidden;
+ -webkit-transition: height 0.3s;
+ -moz-transition: height 0.3s;
+ transition: height 0.3s;
+ border-bottom: 1px solid white; }
 
 .header.shrink {
-  border-bottom: 1px solid #e1e1e1; }
+ border-bottom: 1px solid #e1e1e1; }
 
 .header.shrink .header-row {
-  padding: 10px 20px; }
+ padding: 10px 20px; }
 
 .header.shrink ul.desktop-menu a {
-  font-size: 18px; }
+ font-size: 18px; }
 
 ul.desktop-menu {
-  display: flex;
-  gap: 30px;
-  align-items: center; }
-  ul.desktop-menu a {
-    font-size: 20px;
-    color: #212224;
-    text-decoration: none;
-    position: relative; }
-    ul.desktop-menu a:hover::after {
-      content: "";
-      position: absolute;
-      height: 2px;
-      width: 100%;
-      background: #212224;
-      left: 0;
-      bottom: -4px; }
+ display: flex;
+ gap: 30px;
+ align-items: center; }
+ ul.desktop-menu a {
+   font-size: 20px;
+   color: #212224;
+   text-decoration: none;
+   position: relative; }
+   ul.desktop-menu a:hover::after {
+     content: "";
+     position: absolute;
+     height: 2px;
+     width: 100%;
+     background: #212224;
+     left: 0;
+     bottom: -4px; }
 
 .current-menu {
-  position: relative; }
-  .current-menu::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background: #212224;
-    left: 0;
-    bottom: -4px; }
+ position: relative; }
+ .current-menu::after {
+   content: "";
+   position: absolute;
+   height: 2px;
+   width: 100%;
+   background: #212224;
+   left: 0;
+   bottom: -4px; }
 
 .hero-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px; }
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-top: 40px; }
 
 .shrink .desktop-logo img {
-  max-width: 100px; }
+ max-width: 100px; }
 
 .right-hero-section {
-  max-width: 700px;
-  max-height: 750px; }
-  .right-hero-section img {
-    width: 100%; }
+ max-width: 700px;
+ max-height: 750px; }
+ .right-hero-section img {
+   width: 100%; }
 
 .thanks-support {
-  font-size: 24px;
-  color: #212224;
-  font-family: "Century Gothic Bold"; }
+ font-size: 24px;
+ color: #212224;
+ font-family: "Century Gothic Bold"; }
 
 .main-title {
-  font-size: 86px;
-  color: #212224;
-  font-family: "Champion Gothic Heavyweight";
-  text-transform: uppercase;
-  line-height: 120%;
-  margin-bottom: 10px; }
+ font-size: 86px;
+ color: #212224;
+ font-family: "Champion Gothic Heavyweight";
+ text-transform: uppercase;
+ line-height: 120%;
+ margin-bottom: 10px; }
 
 .hero-cta {
-  border: 1px solid #000000;
-  border-radius: 6px;
-  display: inline-block;
-  padding: 15px 84px;
-  color: #212224;
-  text-decoration: none;
-  font-size: 24px;
-  transition: ease-in-out 0.15s; }
-  .hero-cta:hover {
-    background: #212224;
-    color: white; }
+ border: 1px solid #000000;
+ border-radius: 6px;
+ display: inline-block;
+ padding: 15px 84px;
+ color: #212224;
+ text-decoration: none;
+ font-size: 24px;
+ transition: ease-in-out 0.15s; }
+ .hero-cta:hover {
+   background: #212224;
+   color: white; }
 
 .footer-logo-col {
-  display: flex;
-  flex-direction: column; }
-  .footer-logo-col img {
-    max-width: 160px; }
+ display: flex;
+ flex-direction: column; }
+ .footer-logo-col img {
+   max-width: 160px; }
 
 .footer-cta {
-  border: 1px solid white;
-  border-radius: 6px;
-  display: inline-block;
-  padding: 12px 30px;
-  color: #212224;
-  background: white;
-  text-decoration: none;
-  font-size: 24px;
-  transition: ease-in-out 0.15s;
-  margin-top: 20px; }
-  .footer-cta:hover {
-    background: none;
-    color: white;
-    border: 1px solid white; }
+ border: 1px solid white;
+ border-radius: 6px;
+ display: inline-block;
+ padding: 12px 30px;
+ color: #212224;
+ background: white;
+ text-decoration: none;
+ font-size: 24px;
+ transition: ease-in-out 0.15s;
+ margin-top: 20px; }
+ .footer-cta:hover {
+   background: none;
+   color: white;
+   border: 1px solid white; }
 
 section h2 {
-  font-size: 65px;
-  text-transform: uppercase;
-  color: #212224;
-  font-family: "Champion Gothic Heavyweight"; }
+ font-size: 65px;
+ text-transform: uppercase;
+ color: #212224;
+ font-family: "Champion Gothic Heavyweight"; }
 
 .full-width-effct {
-  position: relative; }
-  .full-width-effct::after {
-    position: absolute;
-    width: 10000vw;
-    height: 100%;
-    background: black;
-    content: "";
-    left: -100vw;
-    z-index: -1;
-    display: block;
-    top: 0;
-    background: #fafafa; }
+ position: relative; }
+ .full-width-effct::after {
+   position: absolute;
+   width: 10000vw;
+   height: 100%;
+   background: black;
+   content: "";
+   left: -100vw;
+   z-index: -1;
+   display: block;
+   top: 0;
+   background: #fafafa; }
 
 .about-us {
-  display: grid;
-  grid-template-columns: 40% 1fr;
-  grid-gap: 200px;
-  padding: 30px 0px;
-  margin-top: 30px; }
+ display: grid;
+ grid-template-columns: 40% 1fr;
+ grid-gap: 200px;
+ padding: 30px 0px;
+ margin-top: 30px; }
 
 .about-nft {
-  max-width: 700px; }
-  .about-nft img {
-    width: 100%; }
+ max-width: 700px; }
+ .about-nft img {
+   width: 100%; }
 
 .about-content {
-  margin-top: 150px; }
-  .about-content .hero-cta {
-    margin-top: 10px; }
+ margin-top: 150px; }
+ .about-content .hero-cta {
+   margin-top: 10px; }
 
 .roadmap-number {
-  color: #dad9d9;
-  font-size: 90px;
-  font-family: "Champion Gothic Heavyweight"; }
+ color: #dad9d9;
+ font-size: 90px;
+ font-family: "Champion Gothic Heavyweight"; }
 
 .roadmap-box {
-  display: grid;
-  grid-template-columns: 60% 1fr;
-  max-width: 980px;
-  grid-gap: 60px;
-  margin: auto; }
+ display: grid;
+ grid-template-columns: 60% 1fr;
+ max-width: 980px;
+ grid-gap: 60px;
+ margin: auto; 
+ position: relative;
+ z-index: 2;}
 
 .roadmap-right-line,
 .roadmap-left-line {
-  max-width: 800px;
-  margin: 30px auto; }
+ max-width: 800px;
+ margin: 30px auto; }
 
 .section-heading {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  padding: 60px 0px; }
+ display: flex;
+ margin: auto;
+ justify-content: center;
+ padding: 60px 0px; }
 
 .section-gallery {
-  max-width: 1600px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px; }
-  .section-gallery a {
-    text-align: center; }
-  .section-gallery img {
-    max-height: 340px;
-    border-radius: 10px;
-    transition: ease-in-out 0.15s; }
-    .section-gallery img:hover {
-      transform: scale(1.04); }
+ max-width: 1600px;
+ margin: auto;
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ grid-gap: 30px; }
+ .section-gallery a {
+   text-align: center; }
+ .section-gallery img {
+   max-height: 340px;
+   border-radius: 10px;
+   transition: ease-in-out 0.15s; }
+   .section-gallery img:hover {
+     transform: scale(1.04); }
 
 .team-section {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
-  margin-bottom: 60px; }
+ max-width: 1200px;
+ margin: auto;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ grid-gap: 30px;
+ margin-bottom: 60px; }
 
 .person-name {
-  color: #212224;
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 25px;
-  margin-bottom: 5px;
-  display: flex;
-  justify-content: center; }
+ color: #212224;
+ font-size: 30px;
+ font-weight: bold;
+ margin-top: 25px;
+ margin-bottom: 5px;
+ display: flex;
+ justify-content: center; }
 
 .person-designation {
-  font-size: 24px;
-  color: #626262;
-  display: flex;
-  justify-content: center; }
+ font-size: 24px;
+ color: #626262;
+ display: flex;
+ justify-content: center; }
 
 .roadmap-heading {
-  font-family: "Champion Gothic Heavyweight";
-  font-size: 36px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  line-height: 41px; }
+ font-family: "Champion Gothic Heavyweight";
+ font-size: 36px;
+ margin-bottom: 20px;
+ text-transform: uppercase;
+ line-height: 41px; }
 
 .roadmap-box p {
-  color: #626262;
-  margin: 30px 0px; }
+ color: #626262;
+ margin: 30px 0px; }
 
 .wallet-connect,
 .mobile-wallet {
-  height: 50px;
-  text-align: center;
-  display: flex;
-  background: #212224;
-  border: 1px solid #212224;
-  color: white !important;
-  align-items: center;
-  padding: 0px 26px;
-  transition: ease-in-out 0.15s; }
-  .wallet-connect:hover,
-  .mobile-wallet:hover {
-    background: white;
-    color: #212224 !important; }
+ height: 50px;
+ text-align: center;
+ display: flex;
+ background: #212224;
+ border: 1px solid #212224;
+ color: white !important;
+ align-items: center;
+ padding: 0px 26px;
+ transition: ease-in-out 0.15s; }
+ .wallet-connect:hover,
+ .mobile-wallet:hover {
+   background: white;
+   color: #212224 !important; }
 
 footer {
-  background: #212224;
-  position: relative;
-  padding: 50px 30px;
-  display: flex;
-  flex-direction: column; }
-  footer::after {
-    position: absolute;
-    width: 10000vw;
-    height: 100%;
-    background: black;
-    content: "";
-    left: -100vw;
-    z-index: -1;
-    display: block;
-    top: 0;
-    background: #212224; }
+ background: #212224;
+ position: relative;
+ padding: 50px 30px;
+ display: flex;
+ flex-direction: column; }
+ footer::after {
+   position: absolute;
+   width: 10000vw;
+   height: 100%;
+   background: black;
+   content: "";
+   left: -100vw;
+   z-index: -1;
+   display: block;
+   top: 0;
+   background: #212224; }
 
 .footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+ display: flex;
+ justify-content: space-between;
+ align-items: center; }
 
 .top {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  padding: 10px 12px;
-  background: #c3c3c3;
-  border-radius: 5px;
-  font-size: 28px;
-  color: black;
-  cursor: pointer;
-  transition-timing-function: ease-in;
-  transition: 1s;
-  text-decoration: none; }
-  .top:hover {
-    text-decoration: none;
-    background: #c3c3c3;
-    color: black; }
+ position: fixed;
+ bottom: 10px;
+ right: 10px;
+ padding: 10px 12px;
+ background: #c3c3c3;
+ border-radius: 5px;
+ font-size: 28px;
+ color: black;
+ text-decoration: none; }
+ .top:hover {
+   text-decoration: none;
+   background: #c3c3c3;
+   color: black; }
 
 .footer-socials-copyright {
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  margin: 20px 0px 0px; }
+ display: flex;
+ justify-content: space-between;
+ color: white;
+ margin: 20px 0px 0px; }
 
 .footer-social {
-  display: flex;
-  gap: 20px; }
+ display: flex;
+ gap: 20px; }
 
-#roadmap {
+ #roadmap {
   padding-bottom: 50px; }
 
 @keyframes roadmap-anim {
@@ -503,22 +503,18 @@ footer {
     left: 0%;
     transform: rotate(0deg); }
   10% {
-    left: 0%;
-    transform: rotate(0deg); }
+    top: 30%; }
   20% {
-    transform: rotate(0deg); }
+    top: 30%;
+    transform: rotate(-40deg); }
   30% {
-    top: 30%;
-    transform: rotate(-40deg); }
+    top: 30%; }
   40% {
-    top: 30%;
-    transform: rotate(-40deg); }
+    top: 30%; }
   50% {
-    top: 30%;
-    transform: rotate(-40deg); }
+    top: 30%; }
   60% {
-    top: 30%;
-    transform: rotate(-40deg); }
+    top: 30%; }
   70% {
     top: 30%; }
   80% {
@@ -535,22 +531,17 @@ footer {
     right: 0%;
     transform: rotate(0deg); }
   10% {
-    right: 0%;
-    transform: rotate(0deg); }
+    top: 30%; }
   20% {
-    transform: rotate(0deg); }
+    transform: rotate(40deg); }
   30% {
-    top: 30%;
-    transform: rotate(40deg); }
+    top: 30%; }
   40% {
-    top: 30%;
-    transform: rotate(40deg); }
+    top: 30%; }
   50% {
-    top: 30%;
-    transform: rotate(40deg); }
+    top: 30%; }
   60% {
-    top: 30%;
-    transform: rotate(40deg); }
+    top: 30%; }
   70% {
     top: 30%; }
   80% {
@@ -569,7 +560,7 @@ footer {
   .roadmap-line::after {
     position: absolute;
     content: "";
-    background: white;
+    background: #ff4a4a;
     display: block;
     width: 100%;
     height: 400px; }
@@ -581,7 +572,8 @@ footer {
   display: block;
   width: 100%;
   height: 400px;
-  animation: roadmap-anim 4s; }
+  animation: roadmap-anim 4s;
+  animation-delay: 0.5s; }
 
 .roadmap-line-opposite {
   position: relative;
@@ -603,7 +595,17 @@ footer {
   display: block;
   width: 100%;
   height: 400px;
-  animation: roadmap-anim-opposite 4s; }
+  animation: roadmap-anim-opposite 4s;
+  animation-delay: 0.5s; }
+
+.roadmap-left-line,
+.roadmap-right-line {
+  opacity: 0;
+  transition-delay: 0.5s; }
+
+.in-viewport.roadmap-left-line,
+.in-viewport.roadmap-right-line {
+  opacity: 1; }
 
 @media only screen and (max-width: 1023px) {
   .hide-on-mobile {
@@ -664,11 +666,12 @@ footer {
     font-size: 70px; }
 
   .roadmap-nft img {
-    width: auto;
+   max-width: 345px;
     max-height: 400px;
     display: table;
     margin: auto; }
-
+    .animateme img {
+     max-width: 345px; }
   .roadmap-right-line,
   .roadmap-left-line {
     margin: 30px;

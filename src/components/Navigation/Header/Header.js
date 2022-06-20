@@ -2,22 +2,26 @@ import React, { useEffect, useState } from 'react'
 import Logo from '../../../assets/images/logo.svg';
 import { Link } from 'react-scroll';
 import './Header.css';
+import { ethers } from "ethers";
+
 
 const Header = () => {
   const [shrink, setShrink] = useState(false);
-  // var menu = new MmenuLight(document.querySelector("#mobile_menu"), "all");
+  const [account, setAccount] = useState(null);
+  
+  const web3init = async() =>{
+    console.log("here");
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    await provider.send("eth_requestAccounts", []);
+    const signer = provider.getSigner()
+    const address = await signer.getAddress();
+    setAccount(address);
+    console.log("signers =>", address )
+    console.log("here at end")
 
-  // var navigator = menu.navigation({
-  //   // selectedClass: 'Selected',
-  //   // slidingSubmenus: true,
-  //   theme: 'dark',
-  //   title: 'NFT'
-  // });
+  }
 
-  // var drawer = menu.offcanvas({
-  //   // position: 'left'
-  // });
-
+  let distanceY = 0;
 
   useEffect(() => {
     window.addEventListener("scroll", resizeHeaderOnScroll);
