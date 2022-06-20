@@ -475,6 +475,9 @@ footer {
   border-radius: 5px;
   font-size: 28px;
   color: black;
+  cursor: pointer;
+  transition-timing-function: ease-in;
+  transition: 1s;
   text-decoration: none; }
   .top:hover {
     text-decoration: none;
