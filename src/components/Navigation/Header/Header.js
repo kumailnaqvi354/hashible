@@ -40,7 +40,7 @@ const Header = () => {
 
 
   return (
-    <header className={`header ${shrink ? "shrink" : ""
+    <header id='header' className={`header ${shrink ? "shrink" : ""
       }`}>
 
       <div className="header-row">

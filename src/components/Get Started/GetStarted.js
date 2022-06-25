@@ -13,9 +13,9 @@ const GetStarted = () => {
                 <div className="thanks-support" data-aos="fade-up" data-aos-duration="300" data-aos-easing="ease-in-sine"
                     data-aos-delay="200">Thank you for your support!</div>
                 <h1 className="main-title" data-aos="fade-up" data-aos-duration="300" data-aos-easing="ease-in-sine"
-                    data-aos-delay="300">Now
+                    data-aos-delay="300"><span className="text-outline-black">Now</span>
                     <br />
-                    Available
+                        Available
                 </h1>
                 <a href="#" className="hero-cta" data-aos="fade-up" data-aos-duration="300" data-aos-easing="ease-in-sine"
                     data-aos-delay="400">
