@@ -27,13 +27,13 @@ const Footer = () => {
 
   return <>
     <footer>
-      <div class="footer-container">
-        <div class="footer-column">
+      <div className="footer-container">
+        <div className="footer-column">
           <WhiteLogo />
         </div>
-        <div class="footer-column">
+        <div className="footer-column">
           <h3>MENU</h3>
-          <div class="footer-menu">
+          <div className="footer-menu">
             <ul>
               <li><Link to="home" spy={true} smooth={true} offset={-100} duration={1000}>Home</Link></li>
               <li><Link to="about" spy={true} smooth={true} offset={-100} duration={1000}>About</Link></li>
@@ -44,9 +44,9 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div class="footer-column">
+        <div className="footer-column">
           <h3>FIND US</h3>
-          <div class="market-place">
+          <div className="market-place">
             <div>
               <img src={require('../../assets/images/opensea.svg').default} alt='Opensea' />
             </div>
@@ -56,9 +56,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div class="footer-column">
+        <div className="footer-column">
           <h3>FOLLOW US</h3>
-          <div class="footer-social">
+          <div className="footer-social">
             <div>
               <img src={require('../../assets/images/discordsocial.svg').default} alt='Discord' />
             </div>
@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div class="footer-socials-copyright">
+      <div className="footer-socials-copyright">
         <div>
           © 2022 Company name. All rights reserved
         </div>
