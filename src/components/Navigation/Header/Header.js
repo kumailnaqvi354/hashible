@@ -74,13 +74,9 @@ const Header = () => {
 
 
   return (
-<<<<<<< Updated upstream
-    <header id='header' className={`header ${shrink ? "shrink" : ""
-=======
     
 
     <header className={`header ${shrink ? "shrink" : ""
->>>>>>> Stashed changes
       }`}>
 
       <div className="header-row">

@@ -9,7 +9,7 @@ const Roadmap = () => {
     var ONCE_IN_VIEWPORT_CLASS = 'in-viewport-once';
     var WAS_IN_VIEWPORT = 'was-in-viewport';
 
-    var scrollme = $( function( $ )
+    const scrollme = $( function( $ )
 {
 	// ----------------------------------------------------------------------------------------------------
 	// ScrollMe object
@@ -537,9 +537,8 @@ const Roadmap = () => {
                 ROADMAP
             </h2>
 
-            <div className="roadmap-box scrollme">
-                <div className="animateme" data-when="span" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-700"
-                    data-scale="0.5">
+            <div className="roadmap-box scrollme" >
+                <div className="animatem  aos-init aos-animate" data-aos="fade-right" data-aos-duration="200" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     <div className="roadmap-number">01</div>
                     <div className="roadmap-heading">Marketplace
                         <br />
@@ -553,8 +552,7 @@ const Roadmap = () => {
                     </div>
                 </div>
 
-                <div className="roadmap-nft animateme" data-when="span" data-from="0.5" data-to="0" data-opacity="0"
-                    data-translatex="700" data-scale="0.5">
+                <div className="roadmap-nft  aos-init aos-animate" data-aos="fade-left" data-aos-duration="200" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     <img src={require('../../assets/images/73roadmap.png')} alt="73roadmap" />
                 </div>
             </div>
@@ -566,13 +564,11 @@ const Roadmap = () => {
             <div className="roadmap-box roadmap-flip scrollme">
 
 
-                <div className="roadmap-nft animateme" data-when="span" data-from="0.5" data-to="0" data-opacity="0"
-                    data-translatex="-700" data-scale="0.5">
+                <div className="roadmap-nft  aos-init aos-animate" data-aos="fade-right" data-aos-duration="200" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     <img src={require('../../assets/images/74roadmap.png')} alt="74roadmap" />
                 </div>
 
-                <div className="animateme" data-when="span" data-from="0.5" data-to="0" data-opacity="0" data-translatex="700"
-                    data-scale="0.5">
+                <div className="animateme  aos-init aos-animate" data-aos="fade-left" data-aos-duration="200" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     <div className="roadmap-number">02</div>
                     <div className="roadmap-heading">Marketplace
                         <br />
@@ -594,8 +590,7 @@ const Roadmap = () => {
 
 
             <div className="roadmap-box scrollme">
-                <div className="animateme" data-when="span" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-700"
-                    data-scale="0.5">
+                <div className="animateme  aos-init aos-animate" data-aos="fade-right" data-aos-duration="200" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     <div className="roadmap-number">03</div>
                     <div className="roadmap-heading">Marketplace
                         <br />
@@ -609,8 +604,7 @@ const Roadmap = () => {
                     </div>
                 </div>
 
-                <div className="roadmap-nft animateme" data-when="span" data-from="0.5" data-to="0" data-opacity="0"
-                    data-translatex="700" data-scale="0.5">
+                <div className="roadmap-nft  aos-init aos-animate" data-aos="fade-left" data-aos-duration="200" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     <img src={require('../../assets/images/75roadmap.png')} alt="75roadmap" />
                 </div>
             </div>
@@ -624,13 +618,11 @@ const Roadmap = () => {
             <div className="roadmap-box roadmap-flip scrollme">
 
 
-                <div className="animateme" data-when="span" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-700"
-                    data-scale="0.5">
+                <div className="animateme  aos-init aos-animate" data-aos="fade-right" data-aos-duration="200" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     <img src={require('../../assets/images/76roadmap.png')} alt="76roadmap" />
                 </div>
 
-                <div className="animateme" data-when="span" data-from="0.5" data-to="0" data-opacity="0" data-translatex="700"
-                    data-scale="0.5">
+                <div className="animateme  aos-init aos-animate" data-aos="fade-left" data-aos-duration="200" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     <div className="roadmap-number">04</div>
                     <div className="roadmap-heading">Marketplace
                         <br />
@@ -651,8 +643,7 @@ const Roadmap = () => {
 
 
             <div className="roadmap-box scrollme">
-                <div className="animateme" data-when="span" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-700"
-                    data-scale="0.5">
+                <div className="animateme  aos-init aos-animate" data-aos="fade-right" data-aos-duration="200" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     <div className="roadmap-number">05</div>
                     <div className="roadmap-heading">Marketplace
                         <br />
@@ -666,8 +657,7 @@ const Roadmap = () => {
                     </div>
                 </div>
 
-                <div className="roadmap-nft animateme" data-when="span" data-from="0.5" data-to="0" data-opacity="0"
-                    data-translatex="700" data-scale="0.5">
+                <div className="roadmap-nft  aos-init aos-animate" data-aos="fade-left" data-aos-duration="200" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     <img src={require('../../assets/images/77roadmap.png')} alt="77roadmap" />
                 </div>
             </div>

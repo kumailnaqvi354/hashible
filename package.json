@@ -18,10 +18,7 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.7",
     "stream": "^0.0.2",
-<<<<<<< Updated upstream
-=======
     "wagmi": "^0.4.12",
->>>>>>> Stashed changes
     "web-vitals": "^2.1.4",
     "web3": "^1.7.3",
     "web3modal": "^1.9.8"
