@@ -1,4 +1,5 @@
 import React from 'react'
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const Navigation = () => {
   
@@ -11,7 +12,7 @@ const Navigation = () => {
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#team">Team</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="#" class="mobile-wallet">Connect</a></li>
+      <li><a href="#"> <ConnectButton /></a></li>
     </ul>
   </nav>
 }
