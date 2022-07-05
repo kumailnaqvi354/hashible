@@ -638,12 +638,12 @@ footer {
     border: 1px solid #bababa;
     padding: 10px 20px; }
 
-.search-filter select {
-  width: 251px;
-  height: 45px;
-  border-radius: 5px;
-  border: 1px solid #bababa;
-  padding: 10px 20px; }
+.select {
+  width: 251px; }
+  /* height: 200px;  */
+  /* border-radius: 5px;
+  border: 1px solid #bababa; */
+  /* padding: 10px 20px; } */
 
 .shop-sidebar {
   width: 280px; }
@@ -793,10 +793,11 @@ footer {
   align-items: center;
   text-align: right;
   color: #626262;
-  margin-top: 5px; }
+  margin-top: 5px; 
+  gap: 10px; }
   .nft-sale-market-place img {
     height: 24px;
-    margin: 3px 10px; }
+    margin: 3px 2px; }
 
 .nft-artwork-result {
   background: #ffffff;
@@ -2488,12 +2489,13 @@ body.mm-ocd-opened {
 
 article {
   position: relative;
-  transition: all 0.3s; }
+  transition: all 0.8s; }
   article.selected {
     z-index: 2; }
 
 .content {
   opacity: 0;
+  height: 213px;
   transform: translateY(20px);
   transition: all ease-out 0.4s 0.1s; }
   .selected .content {
@@ -2502,7 +2504,8 @@ article {
     padding: 0px 38px;
     margin-bottom: 20px; }
   .collapsed .content {
-    display: none; }
+    height: 0;
+    overflow: hidden; }
 
 .accordion-parent {
   border-radius: 2px;

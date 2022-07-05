@@ -1,8 +1,15 @@
 import React from 'react'
+import Select from 'react-select'
 
 const Shop = () => {
+  
+  const options = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' }
+  ]
+
   function toggleAccordion(event) {
-    debugger;
     let items;
     items = document.getElementsByTagName('article');
     const article_id = event.currentTarget.getAttribute('id');
@@ -34,12 +41,7 @@ const Shop = () => {
         </div>
 
         <div className="search-filter">
-          <select name="" id="">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
-          </select>
+          <Select options={options} className="select" />
         </div>
       </section>
     </div>
@@ -216,7 +218,10 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> <img src={require('../../assets/images/opensea.svg').default} alt='opensea' /> </div>
+                <div> 
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                  <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
+                </div>
               </div>
 
               <div className="buy-art">
@@ -242,7 +247,10 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> <img src={require('../../assets/images/opensea.svg').default} alt='opensea' /> </div>
+                <div> 
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                  <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
+                </div>
               </div>
 
               <div className="buy-art">
@@ -267,7 +275,10 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> <img src={require('../../assets/images/opensea.svg').default} alt='opensea' /> </div>
+                <div> 
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                  <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
+                </div>
               </div>
 
               <div className="buy-art">
@@ -292,33 +303,10 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> <img src={require('../../assets/images/opensea.svg').default} alt='opensea' /> </div>
-              </div>
-
-              <div className="buy-art">
-                Buy Now
-              </div>
-
-            </div>
-
-          </div>
-          <div className="nft-artwork-result">
-            <div className="nft-sale-img">
-              <img src={require('../../assets/images/117gallery.png')} alt='117-gallery' />
-            </div>
-
-            <div className="nft-artwork-details">
-              <div className="nft-sale-title">
-                Cyber #3968
-              </div>
-
-              <div className="nft-sale-title-second">
-                Weed Cats Family #375
-              </div>
-
-              <div className="nft-sale-market-place">
-                <div>Marketplace</div>
-                <div> <img src={require('../../assets/images/opensea.svg').default} alt='opensea' /> </div>
+                <div> 
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                  <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
+                </div>
               </div>
 
               <div className="buy-art">
@@ -344,7 +332,10 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> <img src={require('../../assets/images/opensea.svg').default} alt='opensea' /> </div>
+                <div> 
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                  <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
+                </div>
               </div>
 
               <div className="buy-art">
@@ -370,7 +361,10 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> <img src={require('../../assets/images/opensea.svg').default} alt='opensea' /> </div>
+                <div> 
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                  <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
+                </div>
               </div>
 
               <div className="buy-art">
@@ -396,7 +390,10 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> <img src={require('../../assets/images/opensea.svg').default} alt='opensea' /> </div>
+                <div> 
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                  <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
+                </div>
               </div>
 
               <div className="buy-art">
@@ -422,7 +419,10 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> <img src={require('../../assets/images/opensea.svg').default} alt='opensea' /> </div>
+                <div> 
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                  <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
+                </div>
               </div>
 
               <div className="buy-art">
@@ -448,7 +448,10 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> <img src={require('../../assets/images/opensea.svg').default} alt='opensea' /> </div>
+                <div> 
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                  <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
+                </div>
               </div>
 
               <div className="buy-art">
@@ -474,7 +477,39 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> <img src={require('../../assets/images/opensea.svg').default} alt='opensea' /> </div>
+                <div> 
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                  <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
+                </div>
+              </div>
+
+              <div className="buy-art">
+                Buy Now
+              </div>
+
+            </div>
+
+          </div>
+          <div className="nft-artwork-result">
+            <div className="nft-sale-img">
+              <img src={require('../../assets/images/117gallery.png')} alt='117-gallery' />
+            </div>
+
+            <div className="nft-artwork-details">
+              <div className="nft-sale-title">
+                Cyber #3968
+              </div>
+
+              <div className="nft-sale-title-second">
+                Weed Cats Family #375
+              </div>
+
+              <div className="nft-sale-market-place">
+                <div>Marketplace</div>
+                <div> 
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                  <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
+                </div>
               </div>
 
               <div className="buy-art">
