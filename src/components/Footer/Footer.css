@@ -1,0 +1,18 @@
+.top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 12px;
+    background: #c3c3c3;
+    border-radius: 5px;
+    font-size: 28px;
+    color: black;
+    text-decoration: none;
+}
+
+.top:hover {
+    text-decoration: none;
+    background: #c3c3c3;
+    color: black;
+    cursor: pointer;
+}
