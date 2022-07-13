@@ -13,23 +13,24 @@ const axios = require('axios').default;
 
 const apiKey = "VoKX6I9d76c1ISL6NpB6KTXmvB6abSpP";
 const baseURL = `https://eth-rinkeby.alchemyapi.io/nft/v2/${apiKey}/getNFTsForCollection`;
-const contractAddr = "0x9e115c44428c86d8ac3fe6a82637d93f9ad686bb";
+const contractAddr = "0x83e495be3549a302d1e72b4f520127ec042b7d58";
 
 
 const getnftData =async()=>{
 
 let nft=[];
 let hasNextPage = true;
- if(hasNextPage) {
-  const { data:nfts } = await axios(`https://deep-index.moralis.io/api/v2/nft/${contractAddr}?chain=rinkeby&format=decimal&cursor=${cursor}`, {
+ while(hasNextPage) {
+  const { data:nfts } = await axios(`https://deep-index.moralis.io/api/v2/nft/${contractAddr}?chain=eth&format=decimal&cursor=${cursor}`, {
         headers: {
           'x-api-key': '0D1yPrfVMgJsqXaqHHfz31Zh4JZq0y2bbv6m5ALiapsiSIO4PAZlQczYOvZjJ4HX'
         }
       })
       console.log(nfts)
  nfts?.result.map((dat)=>{
+  console.log(dat)
   settotalNftsFound(totalNftsFound += 1);
-   nft[parseInt(dat.id.tokenId, 16)] = {name:dat.metadata.name,image:dat.metadata.image,description:dat.metadata.description,id:parseInt(dat.id.tokenId, 16)}
+   nft[dat.token_id] = {name:dat.name,image:(JSON.parse(dat.metadata)).image,description:(JSON.parse(dat.metadata)).description,id:dat.token_id}
  })
 setData(data= nft)
   if (!cursor) {
@@ -40,7 +41,6 @@ setData(data= nft)
   
   console.log(totalNftsFound)
   setFetchSuccess(FetchSuccess = true)
-  console.log(data[2])
 }
 
 }
@@ -76,7 +76,7 @@ setData(data= nft)
 //   )})
 // }
   useEffect(()=>{
-    // getnftData()
+    getnftData()
   },[])
 
   function toggleAccordion(event) {
@@ -538,7 +538,7 @@ setData(data= nft)
 
           </div>
 {FetchSuccess && data.map((dat)=>{  
-  console.log(dat)  
+ console.log(dat)
    return (  
            <div className="nft-artwork-result">
                 <div className="nft-sale-img">
@@ -551,7 +551,7 @@ setData(data= nft)
                   </div>
     
                   <div className="nft-sale-title-second">
-                  {`${dat?.name}#${dat?.tokenId}` } 
+                  {`${dat?.name}#${dat?.id}` } 
                   </div>
     
                   <div className="nft-sale-market-place">
