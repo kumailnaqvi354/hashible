@@ -4,22 +4,61 @@ import { Link } from 'react-scroll';
 import './Header.css';
 import { ethers } from "ethers";
 
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
+import '@rainbow-me/rainbowkit/styles.css';
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+} from '@rainbow-me/rainbowkit';
+import {
+  chain,
+  configureChains,
+  createClient,
+  WagmiConfig,
+} from 'wagmi';
+import { alchemyProvider } from 'wagmi/providers/alchemy';
+import { publicProvider } from 'wagmi/providers/public';
+
+
+const { chains, provider } = configureChains(
+  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
+  [
+    alchemyProvider({ alchemyId: process.env.ALCHEMY_ID }),
+    publicProvider()
+  ]
+);
+
+const { connectors } = getDefaultWallets({
+  appName: 'Hashible',
+  chains
+});
+
+const wagmiClient = createClient({
+  autoConnect: true,
+  connectors,
+  provider
+})
 
 const Header = () => {
   const [shrink, setShrink] = useState(false);
   const [account, setAccount] = useState(null);
   
-  const web3init = async() =>{
-    console.log("here");
-    const provider = new ethers.providers.Web3Provider(window.ethereum)
-    await provider.send("eth_requestAccounts", []);
-    const signer = provider.getSigner()
-    const address = await signer.getAddress();
-    setAccount(address);
-    console.log("signers =>", address )
-    console.log("here at end")
+  // const [account, setAccount] = useState(null);
+  
+  // const web3init = async() =>{
+  //   console.log("here");
+  //   const provider = new ethers.providers.Web3Provider(window.ethereum)
+  //   await provider.send("eth_requestAccounts", []);
+  //   const signer = provider.getSigner()
+  //   const address = await signer.getAddress();
+  //   setAccount(address);
+  //   console.log("signers =>", address )
+  //   console.log("here at end")
 
-  }
+  // }
+
+
 
   let distanceY = 0;
 
@@ -55,7 +94,8 @@ const Header = () => {
             <li><Link to="gallery" spy={true} smooth={true} offset={-100} duration={1000} >Gallery</Link></li>
             <li><Link to="team" spy={true} smooth={true} offset={-100} duration={1000} >Team</Link></li>
             <li><Link to="faq" spy={true} smooth={true} offset={-100} duration={1000} >FAQ</Link></li>
-            <li><a href="#" className="wallet-connect">Connect</a></li>
+            {/* <li><a href="#" className="wallet-connect">Connect</a></li> */}
+            <li><a href="#" >  <ConnectButton /></a></li>
           </ul>
         </div>
 
