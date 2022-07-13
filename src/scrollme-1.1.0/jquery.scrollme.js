@@ -1,40 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+// ----------------------------------------------------------------------------------------------------
+// ScrollMe
+// A jQuery plugin for adding simple scrolling effects to web pages
+// http://scrollme.nckprsn.com
+// ----------------------------------------------------------------------------------------------------
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-
-    <script>
-      
-	// const [animation, setanimate] = useState();
-
-    var WATCH_CLASS = 'i-v';
-    var IN_VIEWPORT_CLASS = 'in-viewport';
-    var ONCE_IN_VIEWPORT_CLASS = 'in-viewport-once';
-    var WAS_IN_VIEWPORT = 'was-in-viewport';
-
-    const scrollme = $( function( $ )
+var scrollme = ( function( $ )
 {
 	// ----------------------------------------------------------------------------------------------------
 	// ScrollMe object
@@ -268,8 +238,6 @@
 			// For each effect
 
 			var effects_length = element.effects.length;
-            let start = 0;
-            let end = 0;
 
 			for( var e=0 ; e<effects_length ; e++ )
 			{
@@ -281,18 +249,18 @@
 				{
 					case 'view' : // Maintained for backwards compatibility
 					case 'span' :
-						start = element.top - _this.viewport_height;
-						end = element.bottom;
+						var start = element.top - _this.viewport_height;
+						var end = element.bottom;
 						break;
 
 					case 'exit' :
-						start = element.bottom - _this.viewport_height;
-						end = element.bottom;
+						var start = element.bottom - _this.viewport_height;
+						var end = element.bottom;
 						break;
 
 					default :
-						start = element.top - _this.viewport_height;
-						end = element.top;
+						var start = element.top - _this.viewport_height;
+						var end = element.top;
 						break;
 				}
 
@@ -484,87 +452,4 @@
 
 	// ----------------------------------------------------------------------------------------------------
 
-    });
-
-    const update = () => {
-        const elements = document.getElementsByClassName(WATCH_CLASS);
-        var viewportTop = window.pageYOffset || document.documentElement.scrollTop;
-        var viewportBottom = viewportTop + (window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        for (var i = 0, len = elements.length; i < len; i += 1) {
-            var element = elements[i];
-
-            if (true === isInViewport(element, scrollTop, viewportTop, viewportBottom)) {
-                if (!hasClass(element, IN_VIEWPORT_CLASS)) {
-                    addClass(element, IN_VIEWPORT_CLASS);
-
-                    if (!hasClass(element, ONCE_IN_VIEWPORT_CLASS)) {
-                        addClass(element, ONCE_IN_VIEWPORT_CLASS);
-                    }
-                }
-            } else {
-                if (hasClass(element, IN_VIEWPORT_CLASS)) {
-                    removeClass(element, IN_VIEWPORT_CLASS);
-
-                    if (!hasClass(element, WAS_IN_VIEWPORT)) {
-                        addClass(element, WAS_IN_VIEWPORT);
-                    }
-                }
-            }
-        }
-    }
-
-    function hasClass(element, className) {
-        if (element.classList) {
-            return element.classList.contains(className);
-        } else {
-            return new RegExp('(^| )' + className + '( |$)', 'gi').test(element.className);
-        }
-    }
-
-    function addClass(element, className) {
-        if (element.classList) {
-            return element.classList.add(className);
-        } else {
-            return element.className += ' ' + className;
-        }
-    }
-
-    function removeClass(element, className) {
-        if (element.classList) {
-            return element.classList.remove(className);
-        } else {
-            return element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-        }
-    }
-
-    function isInViewport(element, scrollTop, viewportTop, viewportBottom) {
-        var elementRect = element.getBoundingClientRect();
-        var elementTop = elementRect.top + scrollTop;
-        var elementBottom = elementTop + element.offsetHeight;
-
-        if (elementBottom >= viewportTop && elementTop < viewportBottom) return true;
-        return false;
-    }
-
-    </script>
-
-
-    <title>Hashible</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-</html>
+})( jQuery );
