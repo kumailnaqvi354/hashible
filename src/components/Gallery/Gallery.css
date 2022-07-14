@@ -1,0 +1,8 @@
+.lg-outer .lg-thumb-outer  {
+    display: flex;
+    justify-content: center;
+}
+
+.react_lightgallery_item {
+    cursor:pointer;
+}

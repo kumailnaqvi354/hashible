@@ -1,5 +1,6 @@
 import React from 'react';
 import { LightgalleryItem } from 'react-lightgallery';
+import './Gallery.css';
 
 const Gallery = () => {
     return (
