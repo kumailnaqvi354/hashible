@@ -1,7 +1,14 @@
-import React from 'react'
-import Select from 'react-select'
+import React, { useEffect, useRef, useState } from 'react';
+import Select from 'react-select';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 const Shop = () => {
+  useEffect(() => {
+    Aos.init();
+  }, [])
+
+  const modalRef = useRef();
   
   const options = [
     { value: 'chocolate', label: 'Chocolate' },
@@ -26,6 +33,22 @@ const Shop = () => {
       event.currentTarget.className = "selected expanded"
     }
   }
+
+  const openModal = () => {
+    setTimeout(() => {
+      modalRef.current.className = "modal modal-lg active";
+      modalRef.current.style.display = "block";
+      modalRef.current.style.opacity = "1";
+    }, 250);
+    // document.body.classList.add("modal-active");
+  }
+
+  const closeModal = () => {
+    modalRef.current.className = "modal modal-lg";
+    modalRef.current.style.display = "none";
+    // document.body.classList.remove("modal-active");
+  }
+
   return <>
     <div className="shop-row">
 
@@ -48,7 +71,7 @@ const Shop = () => {
 
 
     <div className="mobile-filter-row">
-      <a href="#" className="mobile-filter" data-toggle="modal" data-target="#smart-contract">
+      <a href="#" className="mobile-filter" data-toggle="modal" data-target="#smart-contract" onClick={openModal} >
         <img src={require('../../assets/images/filter-mobile.svg').default} alt="mobile-filter" /> Filter</a>
       <a href="#" className="mobile-sort">
         <img src={require('../../assets/images/sort-mobile.svg').default} alt="sort-mobile" /> Sort</a>
@@ -218,8 +241,8 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> 
-                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                <div>
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' />
                   <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
                 </div>
               </div>
@@ -247,8 +270,8 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> 
-                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                <div>
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' />
                   <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
                 </div>
               </div>
@@ -275,8 +298,8 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> 
-                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                <div>
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' />
                   <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
                 </div>
               </div>
@@ -303,37 +326,8 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> 
-                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
-                  <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
-                </div>
-              </div>
-
-              <div className="buy-art">
-                Buy Now
-              </div>
-
-            </div>
-
-          </div>
-          <div className="nft-artwork-result">
-            <div className="nft-sale-img">
-              <img src={require('../../assets/images/117gallery.png')} alt='117-gallery' />
-            </div>
-
-            <div className="nft-artwork-details">
-              <div className="nft-sale-title">
-                Cyber #3968
-              </div>
-
-              <div className="nft-sale-title-second">
-                Weed Cats Family #375
-              </div>
-
-              <div className="nft-sale-market-place">
-                <div>Marketplace</div>
-                <div> 
-                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                <div>
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' />
                   <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
                 </div>
               </div>
@@ -361,8 +355,8 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> 
-                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                <div>
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' />
                   <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
                 </div>
               </div>
@@ -390,8 +384,8 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> 
-                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                <div>
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' />
                   <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
                 </div>
               </div>
@@ -419,8 +413,8 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> 
-                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                <div>
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' />
                   <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
                 </div>
               </div>
@@ -448,8 +442,8 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> 
-                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                <div>
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' />
                   <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
                 </div>
               </div>
@@ -477,8 +471,8 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> 
-                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                <div>
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' />
                   <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
                 </div>
               </div>
@@ -506,8 +500,37 @@ const Shop = () => {
 
               <div className="nft-sale-market-place">
                 <div>Marketplace</div>
-                <div> 
-                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' /> 
+                <div>
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' />
+                  <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
+                </div>
+              </div>
+
+              <div className="buy-art">
+                Buy Now
+              </div>
+
+            </div>
+
+          </div>
+          <div className="nft-artwork-result">
+            <div className="nft-sale-img">
+              <img src={require('../../assets/images/117gallery.png')} alt='117-gallery' />
+            </div>
+
+            <div className="nft-artwork-details">
+              <div className="nft-sale-title">
+                Cyber #3968
+              </div>
+
+              <div className="nft-sale-title-second">
+                Weed Cats Family #375
+              </div>
+
+              <div className="nft-sale-market-place">
+                <div>Marketplace</div>
+                <div>
+                  <img src={require('../../assets/images/opensea-blue.svg').default} alt='opensea' />
                   <img src={require('../../assets/images/lookrare-color.svg').default} alt='lookrare' />
                 </div>
               </div>
@@ -521,6 +544,99 @@ const Shop = () => {
           </div>
         </div>
       </section>
+    </div>
+
+    <div ref={modalRef} id="smart-contract" className="modal modal-lg">
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <span className="modal-close" onClick={closeModal}>&times;</span>
+          <div className="modal-body">
+
+            <div className="modal-filter-container">
+              <div className="card">
+                <article id="article-1" className="collapsed" onClick={toggleAccordion}>
+                  <div className="market-arrow sidebar-content-heading">Status</div>
+                  <div className="content">
+                    <div className="market-status-row">
+                      <div className="market-checkbox-row active">
+                        <div>Buy Now</div>
+                        <div><input type="checkbox" /></div>
+                      </div>
+                    </div>
+                    <div className="market-status-row">
+                      <div className="market-checkbox-row">
+                        <div>On Auction</div>
+                        <div><input type="checkbox" /></div>
+                      </div>
+                    </div>
+                    <div className="market-status-row">
+                      <div className="market-checkbox-row">
+                        <div>New</div>
+                        <div><input type="checkbox" /></div>
+                      </div>
+                    </div>
+                    <div className="market-status-row">
+                      <div className="market-checkbox-row">
+                        <div>Has Offers</div>
+                        <div><input type="checkbox" /></div>
+                      </div>
+                    </div>
+                    <div className="sidebar-divider">
+                    </div>
+                  </div>
+                </article>
+
+
+
+              </div>
+
+              <div className="card">
+                <article id="article-3" className="collapsed" onClick={toggleAccordion}>
+                  <div className="market-arrow sidebar-content-heading">Prices</div>
+                  <div className="content">
+                    <div className="market-status-row">
+                      <div className="market-checkbox-row active">
+                        <div>Buy Now</div>
+                        <div><input type="checkbox" /></div>
+                      </div>
+                    </div>
+                    <div className="market-status-row">
+                      <div className="market-checkbox-row">
+                        <div>On Auction</div>
+                        <div><input type="checkbox" /></div>
+                      </div>
+                    </div>
+                    <div className="market-status-row">
+                      <div className="market-checkbox-row">
+                        <div>New</div>
+                        <div><input type="checkbox" /></div>
+                      </div>
+                    </div>
+                    <div className="market-status-row">
+                      <div className="market-checkbox-row">
+                        <div>Has Offers</div>
+                        <div><input type="checkbox" /></div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+
+
+
+              <div className="modal-filter-cta-row">
+                <button className="primary-cta">Search</button>
+                <button className="secondary-cta" onClick={closeModal}>Cancel</button>
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
     </div>
   </>
 }

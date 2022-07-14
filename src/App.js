@@ -13,12 +13,12 @@ function App() {
   return (
     <div className="main-wrapper">
       <Header />
-      {/* <GetStarted />
+      <GetStarted />
       <About />
       <Roadmap />
       <Gallery />
       <Team />
-      <FAQ /> */}
+      <FAQ />
       <Shop/>
       <Footer />
     </div>
