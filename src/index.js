@@ -6,12 +6,18 @@ import { LightgalleryProvider } from "react-lightgallery";
 import App from './App';
 
 ReactDOM.render(
- <React.StrictMode>
-   <LightgalleryProvider>
-     <App />
-   </LightgalleryProvider>
- </React.StrictMode>,
- document.getElementById("root")
+  <React.StrictMode>
+    <LightgalleryProvider lightgallerySettings={
+      {
+        download: false,
+        zoom: false,
+        fullScreen: false
+      }
+    }>
+      <App />
+    </LightgalleryProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
