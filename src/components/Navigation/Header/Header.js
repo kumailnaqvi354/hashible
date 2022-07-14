@@ -95,7 +95,7 @@ const Header = () => {
             <li><Link to="team" spy={true} smooth={true} offset={-100} duration={1000} >Team</Link></li>
             <li><Link to="faq" spy={true} smooth={true} offset={-100} duration={1000} >FAQ</Link></li>
             {/* <li><a href="#" className="wallet-connect">Connect</a></li> */}
-            <li><a href="#" >  <ConnectButton /></a></li>
+            <li>  <ConnectButton /></li>
           </ul>
         </div>
 
