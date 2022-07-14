@@ -61,7 +61,7 @@ function App() {
       <Team />
       <FAQ />
       <Shop/>
-      <Footer />
+      {/* <Footer /> */}
       </RainbowKitProvider>
     </WagmiConfig>
     </div>
