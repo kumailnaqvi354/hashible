@@ -245,8 +245,7 @@ ul.desktop-menu {
 .hero-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 80px; }
+  align-items: center; }
 
 .desktop-logo img {
   transition: ease-in-out 300ms;
@@ -1126,14 +1125,8 @@ footer {
     padding: 70px 60px;
     margin-top: 30px; }
 
-  #home,
-  #about,
-  #gallery,
-  #team #faq {
-    min-height: 70vh; }
-
   .hero-section {
-    height: 70vh; }
+    height: 100vh; }
 
   section h2 {
     font-size: 55px; }
@@ -2793,8 +2786,10 @@ body.modal-active {
   .modal-filter-cta-row .primary-cta {
     background: black;
     color: white; }
+
     button.iekbcc0.iekbcc9.ju367v6x.ju367v7i.ju367v93.ju367vn.ju367vdr.ju367vec.ju367v11.ju367v1c.ju367v2b.ju367v8i._12cbo8i3.ju367v8g._12cbo8i4._12cbo8i6 {
       background-color: black;
+      color: white;
   }
 
 /*# sourceMappingURL=main.css.map */
