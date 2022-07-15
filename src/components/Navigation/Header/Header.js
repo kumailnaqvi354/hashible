@@ -3,7 +3,7 @@ import Logo from '../../../assets/images/logo.svg';
 import { Link } from 'react-scroll';
 import './Header.css';
 // import { ethers } from "ethers";
-import MmenuLight from 'mmenu-light'; 
+import MmenuLight from 'mmenu-light';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 import '@rainbow-me/rainbowkit/styles.css';
@@ -20,28 +20,6 @@ import {
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 
-
-
-// var menu = new MmenuLight(document.querySelector("#mobile_menu"), "all");
-
-//  menu.navigation({
-//   // selectedClass: 'Selected',
-//   // slidingSubmenus: true,
-//   theme: 'dark',
-//   title: 'NFT'
-// });
-
-// var drawer = menu.offcanvas({
-//   // position: 'left'
-// });
-
-// //	Open the menu.
-// document
-//   .querySelector('a[href="#mobile_menu"]')
-//   .addEventListener("click", (evnt) => {
-//     evnt.preventDefault();
-//     drawer.open();
-//   });
 
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
@@ -88,6 +66,29 @@ const Header = () => {
     window.addEventListener("scroll", resizeHeaderOnScroll);
     return () => {
       window.removeEventListener("scroll", resizeHeaderOnScroll);
+
+      var menu = new MmenuLight(document.querySelector("#mobile_menu"), "all");
+
+      menu.navigation({
+        // selectedClass: 'Selected',
+        // slidingSubmenus: true,
+        theme: 'dark',
+        title: 'NFT'
+      });
+
+      var drawer = menu.offcanvas({
+        // position: 'left'
+      });
+
+      //	Open the menu.
+      document
+        .querySelector('a[href="#mobile_menu"]')
+        .addEventListener("click", (evnt) => {
+          evnt.preventDefault();
+          drawer.open();
+        });
+
+
     }
   }, [])
 
@@ -117,7 +118,7 @@ const Header = () => {
             <li><Link to="team" spy={true} smooth={true} offset={-75} duration={1000} >Team</Link></li>
             <li><Link to="faq" spy={true} smooth={true} offset={-75} duration={1000} >FAQ</Link></li>
             {/* <li><a href="#" className="wallet-connect">Connect</a></li> */}
-            <li>  <ConnectButton /></li>
+            <li> <ConnectButton /></li>
           </ul>
         </div>
 
@@ -130,7 +131,7 @@ const Header = () => {
 
 
 
-        {/* <div id="mobile_menu">
+        <div id="mobile_menu">
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -140,7 +141,7 @@ const Header = () => {
             <li><a href="#faq">FAQ</a></li>
             <li>  <ConnectButton /></li>
           </ul>
-        </div> */}
+        </div>
       </div>
     </header>
   )
