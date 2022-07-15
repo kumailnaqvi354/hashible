@@ -1,14 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Select from 'react-select';
+import { useIPFS } from "./useIPFS";
 import Aos from 'aos';
 import "aos/dist/aos.css";
 
 const Shop = () => {
-  useEffect(() => {
-    Aos.init();
-  }, [])
-
-  const modalRef = useRef();
+  let [data,setData] = useState([]);
+  let[totalNftsFound,settotalNftsFound] = useState(0)
+  let[cursor,setcursor] = useState("")
+let[FetchSuccess,setFetchSuccess] = useState(false);
+const axios = require('axios').default;
+const apiKey = "VoKX6I9d76c1ISL6NpB6KTXmvB6abSpP";
+const baseURL = `https://eth-rinkeby.alchemyapi.io/nft/v2/${apiKey}/getNFTsForCollection`;
+const contractAddr = "0x83e495be3549a302d1e72b4f520127ec042b7d58";
+const modalRef = useRef();
   
   const options = [
     { value: 'chocolate', label: 'Chocolate' },
@@ -16,7 +21,41 @@ const Shop = () => {
     { value: 'vanilla', label: 'Vanilla' }
   ]
 
+  useEffect(() => {
+    Aos.init();
+    getnftData();
+  }, [])
+
+  const getnftData = async () => {
+    let nft = [];
+    let hasNextPage = true;
+    while (hasNextPage) {
+      const { data: nfts } = await axios(`https://deep-index.moralis.io/api/v2/nft/${contractAddr}?chain=eth&format=decimal&cursor=${cursor}`, {
+        headers: {
+          'x-api-key': '0D1yPrfVMgJsqXaqHHfz31Zh4JZq0y2bbv6m5ALiapsiSIO4PAZlQczYOvZjJ4HX'
+        }
+      })
+      console.log(nfts)
+      nfts?.result.map((dat) => {
+        console.log(dat)
+        settotalNftsFound(totalNftsFound += 1);
+        nft[dat.token_id] = { name: dat.name, image: (JSON.parse(dat.metadata)).image, description: (JSON.parse(dat.metadata)).description, id: dat.token_id }
+      })
+      setData(data = nft)
+      if (!cursor) {
+        // When nextToken is not present, then there are no more NFTs to fetch.
+        hasNextPage = false;
+      }
+      setcursor(cursor = nfts.cursor);
+
+      console.log(totalNftsFound)
+      setFetchSuccess(FetchSuccess = true)
+    }
+
+  }
+
   function toggleAccordion(event) {
+    debugger;
     let items;
     items = document.getElementsByTagName('article');
     const article_id = event.currentTarget.getAttribute('id');

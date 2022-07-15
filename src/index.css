@@ -220,7 +220,8 @@ ul.desktop-menu {
     font-size: 20px;
     color: #212224;
     text-decoration: none;
-    position: relative; }
+    position: relative;
+    transition: ease-in-out 300ms; }
     ul.desktop-menu a:hover::after {
       content: "";
       position: absolute;
@@ -244,8 +245,11 @@ ul.desktop-menu {
 .hero-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 40px; }
+  align-items: center; }
+
+  .desktop-logo img {
+    transition: ease-in-out 300ms;
+    max-width: 160px; }
 
 .shrink .desktop-logo img {
   max-width: 100px; }
@@ -376,7 +380,8 @@ section h2 {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px; }
+  grid-gap: 30px; 
+  padding-bottom: 40px; }
   .section-gallery a {
     text-align: center; }
   .section-gallery img {
@@ -392,11 +397,12 @@ section h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
-  margin-bottom: 60px; }
+  margin-bottom: 60px; 
+  padding-bottom: 20px; }
 
 .person-name {
   color: #212224;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bold;
   margin-top: 25px;
   margin-bottom: 5px;
@@ -404,7 +410,7 @@ section h2 {
   justify-content: center; }
 
 .person-designation {
-  font-size: 24px;
+  font-size: 18px;
   color: #626262;
   display: flex;
   justify-content: center; }
@@ -468,7 +474,8 @@ footer {
   color: white; }
   .footer-container h3 {
     font-size: 20px;
-    margin-bottom: 10px; }
+    margin-bottom: 18px;
+    font-weight: bold; }
   .footer-container ul {
     display: flex;
     flex-direction: column;
@@ -644,6 +651,13 @@ footer {
   /* border-radius: 5px;
   border: 1px solid #bababa; */
   /* padding: 10px 20px; } */
+
+  .search-filter select {
+    width: 251px;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #bababa;
+    padding: 10px 20px; }
 
 .shop-sidebar {
   width: 280px; }
@@ -844,6 +858,9 @@ footer {
 .text-outline-black {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px black; }
+
+#faq {
+  padding-bottom: 70px; }
 
 @media only screen and (max-width: 1023px) {
   .hide-on-mobile {
@@ -1104,7 +1121,7 @@ footer {
 @media only screen and (min-width: 1024px) and (max-width: 1600px) {
   .hero-section {
     gap: 50px;
-    padding: 0px 30px; }
+    padding: 80px 30px; }
 
   .main-title {
     font-size: 70px; }
@@ -1113,14 +1130,11 @@ footer {
     display: grid;
     grid-template-columns: 40% 1fr;
     grid-gap: 200px;
-    padding: 90px 60px;
+    padding: 70px 60px;
     margin-top: 30px; }
 
-  #home,
-  #about,
-  #gallery,
-  #team #faq {
-    min-height: 70vh; }
+    .hero-section {
+      height: 100vh; }
 
   section h2 {
     font-size: 55px; }
@@ -1144,9 +1158,6 @@ footer {
 
   .section-gallery img {
     max-height: 270px; }
-
-  .team-section img {
-    max-height: 280px; }
 
   .team-section {
     grid-template-columns: repeat(3, 1fr);
@@ -1194,6 +1205,18 @@ footer {
     align-items: center; }
     #about .about-content {
       margin-top: 0px; } }
+      @media only screen and (min-width: 1023px) {
+        .team-section {
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 30px;
+          margin-bottom: 60px;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 0px 50px; }
+      
+        .team-section img {
+          max-height: 160px; } }
 [data-aos][data-aos][data-aos-duration="50"],
 body[data-aos-duration="50"] [data-aos] {
   transition-duration: 50ms; }
@@ -2489,7 +2512,7 @@ body.mm-ocd-opened {
 
 article {
   position: relative;
-  transition: all 0.8s; }
+  transition: all 0.3s; }
   article.selected {
     z-index: 2; }
 
@@ -2715,7 +2738,6 @@ body.modal-active {
 @media screen and (min-width: 992px) {
   .modal-xl .modal-dialog {
     width: 900px; } }
-
 .modal-body {
   display: grid;
   grid-template-columns: 1fr;
