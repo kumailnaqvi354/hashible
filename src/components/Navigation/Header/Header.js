@@ -139,7 +139,7 @@ const Header = () => {
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li>  <ConnectButton /></li>
+            <li className='connectBtn'>  <ConnectButton /></li>
           </ul>
         </div>
       </div>

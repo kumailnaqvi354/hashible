@@ -60,7 +60,7 @@ function App() {
       <Gallery />
       <Team />
       <FAQ />
-      {/* <Shop/> */}
+      <Shop/>
       <Footer />
       </RainbowKitProvider>
     </WagmiConfig>
